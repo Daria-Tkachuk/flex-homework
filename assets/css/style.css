@@ -6,6 +6,10 @@ body {
   font-family: "Lexend", sans-serif;
 }
 
+:root {
+  --orange: #ff5100;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -23,6 +27,7 @@ nav {
 
 .color {
   color: var(--orange);
+  font-weight: bold;
 }
 
 .fa-solid {
@@ -55,12 +60,17 @@ a {
   color: inherit;
 }
 
-header, .section-3 {
-  background-color: rgb(83, 81, 81);
+.bg {
+  background-color: rgba(50, 50, 50, 0.3);
+  padding: 20px;
+}
+
+header {
   background-image: url(/imgs/c3c9767951c51a7e2807a7d0fadb9f1c2a8b1ef6.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.bg,
+.section-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,23 +79,31 @@ header, .section-3 {
   text-align: center;
 }
 
-header > p {
-  font-size: 1.3rem;
-  margin-top: 10px;
+header,
+.section-3 {
+  background-color: rgb(83, 81, 81);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header-rest {
   font-weight: bold;
   margin-top: 60px;
+  font-size: 1.3rem;
+}
+
+.header-text {
+  margin-top: 10px;
 }
 
 h1 {
   font-size: 3rem;
   min-width: 320px;
   width: 100%;
-  max-width: 1180px;
+  max-width: 600px;
   font-weight: bold;
-  line-height: 1.3em;
+  line-height: 1.3;
 }
 
 .header-link {
@@ -95,8 +113,7 @@ h1 {
   margin: 50px 0 130px;
 }
 
-header a {
-  display: block;
+.link {
   font-size: 1.2em;
   font-weight: bold;
   border: 2px solid white;
@@ -105,7 +122,7 @@ header a {
   width: 180px;
 }
 
-section > h2 {
+.section-headline {
   font-size: 2.8rem;
   font-weight: 600;
   text-align: center;
@@ -113,25 +130,27 @@ section > h2 {
 }
 
 .section {
+  padding: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 20px;
   margin: 50px;
-  line-height: 2.5em; 
+  line-height: 1.5;
 }
 
 .section-img {
   border-radius: 40px;
   width: 250px;
   height: 480px;
-  background-image: url(/imgs/e4e9c156bd6cbed060bc5cf0d6d1047fa8896663.jpg);
-  background-position: center;
+  object-position: center;
 }
 
 .section-text {
   display: flex;
   flex-direction: column;
-  width: 540px;
+  justify-content: center;
+  max-width: 540px;
 }
 
 h3 {
@@ -154,7 +173,7 @@ h3 {
 .section-3 {
   background-image: url(/imgs/2da7dc5b62e47d4ba6308cc4a1c5c2d5a9ad2351.jpg);
   margin-top: 200px;
-  }
+}
 
 .section-3-header {
   font-size: 2.7rem;
@@ -190,12 +209,8 @@ footer {
   margin: 100px;
 }
 
-footer>p {
+.footer-text {
   font-size: 0.7em;
-} 
-
-:root {
-  --orange: #ff5100;
 }
 
 .background {
